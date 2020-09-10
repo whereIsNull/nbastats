@@ -28,6 +28,10 @@ public class MatchGame {
 	
 	@OneToMany
 	private List<MatchTeamsScoreQuarter> scoreByQuarter;
+
+	private String visitorPORecord;
+
+	private String homePORecord;
 	
 	public Long getId() {
 		return id;
@@ -92,6 +96,19 @@ public class MatchGame {
 	
 	public void setBoxScoreLink(String boxScoreLink) {
 		this.boxScoreLink = boxScoreLink;
+	}
+	
+	public String getVisitorPORecord() {
+		return visitorPORecord;
+	}
+	public void setVisitorPORecord(String visitorPORecord) {
+		this.visitorPORecord = visitorPORecord;
+	}
+	public String getHomePORecord() {
+		return homePORecord;
+	}
+	public void setHomePORecord(String homePORecord) {
+		this.homePORecord = homePORecord;
 	}
 	
 	@Override

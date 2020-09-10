@@ -47,6 +47,7 @@ public class MatchesByDayImporter {
     			Elements scoresByQuarterHomeTeamsElements = teamHomeElement.getElementsByClass("qtr");
     			Integer homeReadScore = Integer.valueOf(teamHomeElement.getElementsByClass("final").get(0).html());
     			String homeName = teamHomeElement.getElementsByClass("team-name").get(0).html();
+    			String homePORecord = teamHomeElement.getElementsByClass("team-record").get(0).html();
     			ArrayList<MatchTeamsScoreQuarter> quarters = new ArrayList<MatchTeamsScoreQuarter>(scoresByQuarterHomeTeamsElements.size());
     			int index = 0;
     			for(Element quarterByHomeTeamElement: scoresByQuarterHomeTeamsElements) {
@@ -62,6 +63,7 @@ public class MatchesByDayImporter {
     			match.setScoreByQuarter(quarters);
     			match.setHomeReadScore(homeReadScore);
     			match.setHomeAbr(homeName);
+    			match.setHomePORecord(homePORecord);
     			
     			//Visitor
     			Element teamVisitorElement = matchScore.getElementsByTag("tr").get(1);
@@ -69,6 +71,7 @@ public class MatchesByDayImporter {
     			Elements scoresByQuarterVisitorTeamsElements = teamVisitorElement.getElementsByClass("qtr");
     			Integer visitorReadScore = Integer.valueOf(teamVisitorElement.getElementsByClass("final").get(0).html());
     			String visitorName = teamVisitorElement.getElementsByClass("team-name").get(0).html();
+    			String visitorPORecord = teamVisitorElement.getElementsByClass("team-record").get(0).html();
     			index = 0;
     			for(Element quarterByVisitorTeamElement: scoresByQuarterVisitorTeamsElements) {
     				MatchTeamsScoreQuarter quarter = new MatchTeamsScoreQuarter();
@@ -80,6 +83,9 @@ public class MatchesByDayImporter {
     			match.setVisitorLink(visitor);
     			match.setVisitorReadScore(visitorReadScore);
     			match.setVisitorAbr(visitorName);
+    			match.setVisitorPORecord(visitorPORecord);
+    			
+    			match.setMatchPdfUrl(matchElement.getElementsByAttributeValue("data-ng-show", "game.gameLinks.pdf.display").get(0).attr("href"));
     			
     			System.out.println(match);
     			System.out.println();
