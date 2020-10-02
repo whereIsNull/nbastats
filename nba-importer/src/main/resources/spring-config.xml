@@ -4,6 +4,7 @@
     xmlns:context="http://www.springframework.org/schema/context"
     xmlns:aop="http://www.springframework.org/schema/aop"
     xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:util="http://www.springframework.org/schema/util"
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
@@ -11,7 +12,8 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop.xsd">
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <context:annotation-config/>
     
@@ -46,11 +48,18 @@
 
     <tx:annotation-driven/>
 	
-	<bean id="matchDao" class="com.mycompany.nbastats.importer.nbastats.importer.model.repositories.MatchDao">
+	<bean id="mySQLMatchDao" class="com.mycompany.nbastats.importer.model.repositories.MySQLMatchDao">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
     
-    <bean id="matchCreatorService" class="com.mycompany.nbastats.importer.nbastats.importer.model.services.MatchCreatorServiceImpl">
+    <bean id="mongoDBMatchDao" class="com.mycompany.nbastats.importer.model.repositories.MongoDBMatchDao" />
+    
+    <util:map id="matchDao" map-class="java.util.HashMap" key-type="java.lang.String" value-type="com.mycompany.nbastats.importer.model.repositories.MatchDao"> 
+	  <entry key="mongoDB" value-ref="mongoDBMatchDao"/>
+	  <entry key="mySQL" value-ref="mySQLMatchDao"/>
+	</util:map>
+    
+    <bean id="matchCreatorService" class="com.mycompany.nbastats.importer.model.services.MatchCreatorServiceImpl">
         <property name="matchDao" ref="matchDao"/>
     </bean>
 </beans>

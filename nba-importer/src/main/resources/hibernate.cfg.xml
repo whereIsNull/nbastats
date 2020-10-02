@@ -26,7 +26,7 @@
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
         
         <!-- mappings for annotated classes -->
-        <mapping class="com.mycompany.nbastats.importer.nbastats.importer.model.entities.MatchGame"/>
-        <mapping class="com.mycompany.nbastats.importer.nbastats.importer.model.entities.MatchTeamsScoreQuarter"/>
+        <mapping class="com.mycompany.nbastats.importer.model.entities.MatchGame"/>
+        <mapping class="com.mycompany.nbastats.importer.model.entities.MatchTeamsScoreQuarter"/>
     </session-factory>
 </hibernate-configuration>

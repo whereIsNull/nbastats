@@ -11,8 +11,8 @@ import org.apache.commons.lang3.mutable.MutableInt;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.mycompany.nbastats.importer.nbastats.importer.model.entities.MatchGame;
-import com.mycompany.nbastats.importer.nbastats.importer.model.services.MatchCreatorService;
+import com.mycompany.nbastats.importer.model.entities.MatchGame;
+import com.mycompany.nbastats.importer.model.services.MatchCreatorService;
 import com.myprojs.nba.importer.matches.MatchesByDayImporter;
 
 import javafx.application.Application;

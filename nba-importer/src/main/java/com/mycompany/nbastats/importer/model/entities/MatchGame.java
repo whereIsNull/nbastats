@@ -1,4 +1,4 @@
-package com.mycompany.nbastats.importer.nbastats.importer.model.entities;
+package com.mycompany.nbastats.importer.model.entities;
 
 import java.util.Calendar;
 import java.util.List;
