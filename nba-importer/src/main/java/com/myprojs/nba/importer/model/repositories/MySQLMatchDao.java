@@ -1,12 +1,12 @@
-package com.mycompany.nbastats.importer.model.repositories;
+package com.myprojs.nba.importer.model.repositories;
 
 import java.util.Calendar;
 import java.util.Date;
 
 import org.hibernate.SessionFactory;
 
-import com.mycompany.nbastats.importer.model.entities.MatchGame;
-import com.mycompany.nbastats.importer.model.entities.MatchTeamsScoreQuarter;
+import com.myprojs.nba.importer.model.entities.MatchGame;
+import com.myprojs.nba.importer.model.entities.MatchTeamsScoreQuarter;
 
 public class MySQLMatchDao implements MatchDao {
 

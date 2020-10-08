@@ -1,4 +1,4 @@
-package com.mycompany.nbastats.importer.model.repositories;
+package com.myprojs.nba.importer.model.repositories;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,8 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mycompany.nbastats.importer.model.entities.MatchGame;
-import com.mycompany.nbastats.importer.model.entities.MatchTeamsScoreQuarter;
+import com.myprojs.nba.importer.model.entities.MatchGame;
+import com.myprojs.nba.importer.model.entities.MatchTeamsScoreQuarter;
 
 public class MongoDBMatchDao implements MatchDao {
 

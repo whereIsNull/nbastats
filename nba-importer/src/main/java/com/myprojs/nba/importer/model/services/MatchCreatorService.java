@@ -1,10 +1,10 @@
-package com.mycompany.nbastats.importer.model.services;
+package com.myprojs.nba.importer.model.services;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import com.mycompany.nbastats.importer.model.entities.MatchGame;
+import com.myprojs.nba.importer.model.entities.MatchGame;
 
 public interface MatchCreatorService {
 

@@ -9,8 +9,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.mycompany.nbastats.importer.model.entities.MatchGame;
-import com.mycompany.nbastats.importer.model.entities.MatchTeamsScoreQuarter;
+import com.myprojs.nba.importer.model.entities.MatchGame;
+import com.myprojs.nba.importer.model.entities.MatchTeamsScoreQuarter;
 
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;

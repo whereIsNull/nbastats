@@ -1,4 +1,4 @@
-package com.mycompany.nbastats.importer.model.entities;
+package com.myprojs.nba.importer.model.entities;
 
 import java.util.Calendar;
 import java.util.List;

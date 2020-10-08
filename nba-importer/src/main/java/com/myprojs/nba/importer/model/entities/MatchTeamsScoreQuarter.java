@@ -1,4 +1,4 @@
-package com.mycompany.nbastats.importer.model.entities;
+package com.myprojs.nba.importer.model.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

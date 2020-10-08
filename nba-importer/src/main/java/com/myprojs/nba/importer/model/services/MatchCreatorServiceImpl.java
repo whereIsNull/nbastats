@@ -1,4 +1,4 @@
-package com.mycompany.nbastats.importer.model.services;
+package com.myprojs.nba.importer.model.services;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -8,10 +8,10 @@ import java.util.Map;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.mycompany.nbastats.importer.model.entities.MatchGame;
-import com.mycompany.nbastats.importer.model.entities.MatchTeamsScoreQuarter;
-import com.mycompany.nbastats.importer.model.repositories.MatchDao;
-import com.mycompany.nbastats.importer.model.repositories.MySQLMatchDao;
+import com.myprojs.nba.importer.model.entities.MatchGame;
+import com.myprojs.nba.importer.model.entities.MatchTeamsScoreQuarter;
+import com.myprojs.nba.importer.model.repositories.MatchDao;
+import com.myprojs.nba.importer.model.repositories.MySQLMatchDao;
 
 public class MatchCreatorServiceImpl implements MatchCreatorService {
 
